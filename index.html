@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Валорант</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body id='home'>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img src="/assets/images/Valorant_logo.svg.png" class="logo"></a>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О Valorant</a></li>
+                <li><a href="#agents">Агенты</a></li>
+                <li><a href="#maps">Карты</a></li>
+                <li><a href="#weapons">Оружие</a></li>
+                <li><a href="#help">Помощь</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id='home' class="home" >
+            <img src="/assets/images/home-bg.jpg" class="home-bg"><div class="overlay"></div>
+            <h1>Добро пожаловать в мир Valorant!</h1>
+            <p>Valorant — это тактический шутер от первого лица, где команды из 5 игроков соревнуются за выполнение различных задач с помощью уникальных агентов. Объедините свои силы с командой и станьте мастером этой стратегии!</p>
+            <a href="#about" class="btn" target="_blank">EXPLORE</a>
+        </section>
+
+        <section id="about" class="about">
+            <h2>Что такое Valorant?</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>О игре</h3>
+                    <p>Valorant — это тактический шутер от первого лица, разработанный компанией Riot Games. В игре две команды по пять человек сражаются друг с другом, выполняя различные миссии. Игроки выбирают агентов, каждый из которых обладает уникальными способностями, которые могут повлиять на ход игры. В Valorant сочетание стратегии и точности выстрела решает исход матчей, и каждый бой требует отличной командной работы и тактического мышления.</p>
+                    <a href="https://playvalorant.com/ru-ru/" class="btn" target="_blank">READ MORE</a>
+                </div>
+                <div class="about-card">
+                    <h3>О компании Riot Games</h3>
+                    <p>Riot Games — это разработчик игр, известный своей игрой League of Legends и другими успешными проектами. С момента основания в 2006 году компания проложила путь в киберспорте, а также в создании игр, которые активно развиваются и поддерживаются. Valorant — их последний проект, который сочетает элементы тактического шутера и уникальных способностей агентов, делая каждый матч непредсказуемым и захватывающим.</p>
+                    <a href="https://www.riotgames.com/" class="btn" target="_blank">Learn more</a>
+                
+                </div>
+            </div>
+        </section>
+        
+
+        <div id="agents" class="slider-container">
+            <h2>Агенты</h2>
+            <div class="slider-track" id="agents-container"></div>
+            <button class="slider-button prev-button">←</button>
+            <button class="slider-button next-button">→</button>
+        </div>
+          
+        
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+          <div class="footer-content">
+            <p>&copy; 2024 Valorant. Все права защищены.</p>
+            <div class="social-links">
+              <a href="#" target="_blank" class="social-icon">Facebook</a>
+              <a href="#" target="_blank" class="social-icon">Twitter</a>
+              <a href="#" target="_blank" class="social-icon">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+</html>

@@ -1,0 +1,469 @@
+/* Общие стили для всего */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0D1921;
+    color: white;
+    text-align: center;
+    padding-top: 95px;
+}
+
+/* Навигация */
+header{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:  rgba(13, 25, 33, 0.7) ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Стили для гамбургерного меню */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 2; 
+}
+
+/* Home секция */
+.home {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.home-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: #0D1921;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+.home p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    width: 100%; 
+    padding: 0 20px;
+    max-width: 700px;
+}
+
+.btn {
+    background-color: #00FCCE;
+    color: black;
+    border: 1px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    width: 210px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff2e00;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* About секция */
+.about {
+    padding: 60px 20px;
+    background-color: #111;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.about h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.about-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.about-card {
+    background-color: #222;
+    padding: 30px;
+    width: 48%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Анимации */
+.about-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #00FCCE, #ff2e00);
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    border: 2px solid #00FCCE;
+}
+
+.about-card h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #00FCCE;
+}
+
+.about-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.about-card .btn {
+    display: inline-block;
+    background-color: #ff2e00;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.about-card .btn:hover {
+    background-color: #00FCCE;
+    transform: scale(1.1);
+}
+
+
+
+/* Слайдер */
+.slider-container h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+/* Карточки агентов */
+.agent-card {
+    background-color: #1f2937;
+    color: #fff;
+    border-radius: 10px;
+    width: 200px;
+    flex-shrink: 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.agent-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.agent-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.agent-name {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.agent-description {
+    font-size: 0.9rem;
+    padding: 10px;
+    line-height: 1.4;
+}
+
+/* Кнопки управления слайдером */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.slider-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Футер */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-icon:hover {
+    color: #00FCCE;
+}
+
+/* Мобильные стили для Footer */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+    }
+    .nav-list li {
+        padding: 30px 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #333;
+    }
+    .nav-list li a {
+        font-size: 22px; 
+    }
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 10px 0;
+        text-align: center;
+        background-color: #0D1921;
+        z-index: 10;
+        gap: 0;
+    }
+
+    .slider-container {
+        padding-top: 60px;
+    }
+    .nav-list.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .about-card {
+        width: 90%;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-content p {
+        font-size: 14px;
+    }
+
+    .social-icon {
+        font-size: 18px;
+    }
+
+    .home h1 {
+        display: none;
+    }
+
+    .btn{
+        font-size: 16px;
+        width: auto;
+    }
+    .about{
+        padding: 80px 20px 0;
+    }
+
+    .about h2{
+        font-size: 34px;
+    }
+    .about-card p{
+        display: -webkit-box;
+        -webkit-line-clamp: 4;  
+        -webkit-box-orient: vertical; 
+        overflow: hidden;
+        text-overflow: ellipsis;  
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1180px) {
+    nav{
+        gap: 20px;
+    }
+    .nav-list {
+        gap: 15px;
+    }
+    .home h1,p{
+        max-width: 700px;
+    }
+    
+    .about-card{
+        width: 100%;
+        max-width: 730px;
+    }
+    .about-content{
+        gap: 40px;
+    }
+    .about{
+        padding: 20px;
+    }
+    .slider-container {
+        margin: 20px auto;
+    }
+}
